@@ -80,8 +80,8 @@
         // 1. Récupérer le score sauvegardé ou démarrer à 0
         let compteur = localStorage.getItem('monScore') ? parseInt(localStorage.getItem('monScore')) : 0;
 
-        let i = 1;
         let b = 0;
+
         const affichage = document.getElementById('resultat');
         const btnPlus = document.getElementById('btnPlus');
         const btnReset = document.getElementById('btnReset');
@@ -99,7 +99,7 @@
 
         // Bouton +1
         btnPlus.addEventListener('click', () => {
-            mettreAJour(compteur + i);
+            mettreAJour(compteur + 1);
         });
 
         // Bouton Reset
@@ -112,7 +112,6 @@
         // Bouton Mystere
         btnNeverClickHere.addEventListener('click',() => {
             mettreAJour(-9999);
-            i = -i;
             b = -9999
         });
 
