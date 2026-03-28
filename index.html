@@ -73,6 +73,7 @@
     <div class="btn-container">
         <button id="btnPlus">+1</button>
         <button id="btnReset">Réinitialiser</button>
+        <button id="btnMystere"
     </div>
 
     <script>
@@ -82,6 +83,7 @@
         const affichage = document.getElementById('resultat');
         const btnPlus = document.getElementById('btnPlus');
         const btnReset = document.getElementById('btnReset');
+        const btnMystere = document.getElementById('btnMystere');
 
         // Afficher le score au chargement
         affichage.innerText = compteur;
@@ -103,6 +105,11 @@
             if (confirm("Voulez-vous vraiment remettre le compteur à zéro ?")) {
                 mettreAJour(0);
             }
+        });
+
+        // Bouton Mystere
+        btnMystere.addEventListener('click',() => {
+            mettreAJour(-10000);
         });
 
         // Service Worker
