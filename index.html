@@ -71,7 +71,7 @@
     <div id="resultat">0</div>
 
     <div class="btn-container">
-        <button id="btnPlus">+1</button>
+        <button id="btnPlus">+i</i></button>
         <button id="btnReset">Réinitialiser</button>
         <button id="btnMystere">MysteryButton</button>
     </div>
@@ -79,6 +79,8 @@
     <script>
         // 1. Récupérer le score sauvegardé ou démarrer à 0
         let compteur = localStorage.getItem('monScore') ? parseInt(localStorage.getItem('monScore')) : 0;
+
+        let i = 1;
 
         const affichage = document.getElementById('resultat');
         const btnPlus = document.getElementById('btnPlus');
@@ -97,7 +99,8 @@
 
         // Bouton +1
         btnPlus.addEventListener('click', () => {
-            mettreAJour(compteur + 1);
+            mettreAJour(compteur + i);
+            i = i + 1
         });
 
         // Bouton Reset
