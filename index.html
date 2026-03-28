@@ -81,7 +81,7 @@
         let compteur = localStorage.getItem('monScore') ? parseInt(localStorage.getItem('monScore')) : 0;
 
         let i = 1;
-
+        let b = 0;
         const affichage = document.getElementById('resultat');
         const btnPlus = document.getElementById('btnPlus');
         const btnReset = document.getElementById('btnReset');
@@ -105,7 +105,7 @@
         // Bouton Reset
         btnReset.addEventListener('click', () => {
             if (confirm("Voulez-vous vraiment remettre le compteur à zéro ?")) {
-                mettreAJour(0);
+                mettreAJour(b);
             }
         });
 
@@ -113,6 +113,7 @@
         btnMystere.addEventListener('click',() => {
             mettreAJour(-10000);
             i = -i;
+            b = -9999
         });
 
         // Service Worker
