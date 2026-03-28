@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,17 +17,21 @@
             margin: 0;
             background-color: #eef2f7;
         }
+
         #resultat {
             font-size: 3rem;
             font-weight: bold;
             color: #2c3e50;
             margin-bottom: 30px;
         }
+
         .btn-container {
             display: flex;
             gap: 15px;
-            flex-direction: column; /* Empilé sur mobile pour plus de confort */
+            flex-direction: column;
+            /* Empilé sur mobile pour plus de confort */
         }
+
         button {
             padding: 20px 40px;
             font-size: 1.2rem;
@@ -34,28 +39,32 @@
             border-radius: 15px;
             cursor: pointer;
             transition: all 0.2s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         #btnPlus {
             background-color: #28a745;
             color: white;
         }
+
         #btnReset {
             background-color: #dc3545;
             color: white;
             font-size: 1rem;
             padding: 10px 20px;
         }
+
         button:active {
             transform: translateY(2px);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
+
 <body>
 
     <div id="resultat">0</div>
-    
+
     <div class="btn-container">
         <button id="btnPlus">Ajouter +1</button>
         <button id="btnReset">Réinitialiser</button>
@@ -64,7 +73,7 @@
     <script>
         // 1. Récupérer le score sauvegardé ou démarrer à 0
         let compteur = localStorage.getItem('monScore') ? parseInt(localStorage.getItem('monScore')) : 0;
-        
+
         const affichage = document.getElementById('resultat');
         const btnPlus = document.getElementById('btnPlus');
         const btnReset = document.getElementById('btnReset');
@@ -81,12 +90,12 @@
 
         // Bouton +1
         btnPlus.addEventListener('click', () => {
-            mettreAJour(compteur + 1);
+            mettreAJour(compteur + 9999999999999999999999999999);
         });
 
         // Bouton Reset
         btnReset.addEventListener('click', () => {
-            if(confirm("Voulez-vous vraiment remettre le compteur à zéro ?")) {
+            if (confirm("Voulez-vous vraiment remettre le compteur à zéro ?")) {
                 mettreAJour(0);
             }
         });
@@ -97,4 +106,5 @@
         }
     </script>
 </body>
+
 </html>
