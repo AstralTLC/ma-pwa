@@ -47,7 +47,7 @@
             color: rgb(33, 162, 176);
         }
 
-        #btnMystere {
+        #btnNeverClickHere {
             background-color: #000000;
             color: rgb(0, 114, 253);
         }
@@ -73,7 +73,7 @@
     <div class="btn-container">
         <button id="btnPlus">+1</i></button>
         <button id="btnReset">Réinitialiser</button>
-        <button id="btnMystere">MysteryButton</button>
+        <button id="btnNeverClickHere">Never click here</button>
     </div>
 
     <script>
@@ -85,7 +85,7 @@
         const affichage = document.getElementById('resultat');
         const btnPlus = document.getElementById('btnPlus');
         const btnReset = document.getElementById('btnReset');
-        const btnMystere = document.getElementById('btnMystere');
+        const btnNeverClickHere = document.getElementById('btnMystere');
 
         // Afficher le score au chargement
         affichage.innerText = compteur;
@@ -110,7 +110,7 @@
         });
 
         // Bouton Mystere
-        btnMystere.addEventListener('click',() => {
+        btnNeverClickHere.addEventListener('click',() => {
             mettreAJour(-10000);
             i = -i;
             b = -9999
