@@ -85,7 +85,7 @@
         const affichage = document.getElementById('resultat');
         const btnPlus = document.getElementById('btnPlus');
         const btnReset = document.getElementById('btnReset');
-        const btnNeverClickHere = document.getElementById('btnMystere');
+        const btnNeverClickHere = document.getElementById('btnNeverClickHere');
 
         // Afficher le score au chargement
         affichage.innerText = compteur;
@@ -109,7 +109,7 @@
             }
         });
 
-        // Bouton Mystere
+        // Bouton Never Click here
         btnNeverClickHere.addEventListener('click',() => {
             mettreAJour(-9999);
             b = -9999
